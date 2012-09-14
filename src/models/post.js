@@ -14,20 +14,22 @@ var Post = new Schema({
 		required: true
 	},
   title: {
-    type: String,
-    required: true
+    type: String
   },
   media: {
     type: String
   },
   date: {
-		type: Date,
-		required: true
+		type: Date
   }
 });
 
 Post.statics.findMostRecent = function(callback) {
   return this.find().exec(callback);
+};
+
+Post.statics.findByExternalIds = function(ids, callback) {
+  return this.find().where('externalId').$in(ids).exec(callback);
 };
 
 module.exports.model = mongoose.model('Post', Post);
