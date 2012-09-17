@@ -5,8 +5,7 @@ var config = {
   development: {
     port: 3000,
     mongodb: {
-      host: '127.0.0.1',
-      database: 'trends_dev'
+      uri: 'mongodb://127.0.0.1/trends_dev'
     },
     instagram: {
       clientId: '',
@@ -32,6 +31,7 @@ var checkEnvVariables = function(service) {
   });
 };
 
+checkEnvVariables('mongodb');
 checkEnvVariables('instagram');
 checkEnvVariables('twitter');
 
