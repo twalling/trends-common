@@ -4,6 +4,7 @@ var env = process.env.NODE_ENV || 'development';
 var config = {
   development: {
     port: 3000,
+    jobInterval: 10 * 1000,
     mongodb: {
       uri: 'mongodb://127.0.0.1/trends_dev'
     },
@@ -31,8 +32,6 @@ var checkEnvVariables = function(service) {
   });
 };
 
-checkEnvVariables('mongodb');
-checkEnvVariables('instagram');
-checkEnvVariables('twitter');
+_.each(['mongodb', 'instagram', 'twitter'], checkEnvVariables);
 
 module.exports = config;

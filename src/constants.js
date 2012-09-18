@@ -9,11 +9,13 @@ module.exports.POST_TYPES = {
 
 module.exports.LOCATIONS = {
   FENWAY: {
+    keyword: 'fenway',
     lat: '42.3464',
     lon: '-71.0976',
     radius: '2mi'
   },
   BRIGHTCOVE: {
+    keyword: 'fortpoint',
     lat: '42.3528',
     lon: '-71.0529',
     radius: '2mi'
