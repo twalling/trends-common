@@ -1,2 +1,1 @@
-trends-common
-=============
+See [https://github.com/twalling/trends-server](https://github.com/twalling/trends-server) for more information regarding this repo.
