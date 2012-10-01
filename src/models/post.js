@@ -24,7 +24,7 @@ var Post = new Schema({
   },
   name: {
     type: String,
-    'default': 'Post'
+    'default': 'Test'
   }
 });
 
